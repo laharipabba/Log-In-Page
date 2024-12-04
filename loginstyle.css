@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Libre+Franklin:wght@100;500;900&family=Oswald:wght@200;600&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('image1.jpg') no-repeat center center/cover;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 50%;
+    height: 70%;
+    background-color: rgba(134, 134, 134, 0.32);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+}
+
+.login-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+input[type="text"], input[type="password"] {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background: linear-gradient(40deg, rgba(255, 248, 192, 0.7), pink);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .login-page {
+        width: 80%;
+        height: 85%;
+        gap: 20px;
+    }
+    .login-details {
+        width: 85%;
+    }
+    input[type="text"], input[type="password"] {
+        font-size: 16px;
+    }
+    .password {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-page {
+        width: 70%;
+        height: 80%;
+    }
+    .password {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-page {
+        width: 60%;
+        height: 75%;
+    }
+}
